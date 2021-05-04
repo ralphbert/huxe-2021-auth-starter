@@ -1,0 +1,13 @@
+<app-aside-layout>
+  <aside>
+    <ul class="nav">
+      <li class="nav-item"><a class="nav-link" routerLink="/todos" routerLinkActive="active"
+                              [routerLinkActiveOptions]="{ exact: true }">Overview</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/todos/add" routerLinkActive="active">Add todo</a></li>
+    </ul>
+  </aside>
+
+  <h2>Todos</h2>
+
+  <router-outlet></router-outlet>
+</app-aside-layout>

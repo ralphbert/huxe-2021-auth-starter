@@ -1,0 +1,13 @@
+<app-single-page-layout>
+  <ng-container *ngIf="data">
+    <p>Welcome {{ data.username }}!</p>
+    <p>This is your data freshly fetched by the server:</p>
+
+    <pre>{{ data | json }}</pre>
+  </ng-container>
+
+  <div *ngIf="error" class="alert alert-danger">{{ error.message }}</div>
+  <div *ngIf="loading">Loading...</div>
+
+  <button type="button" (click)="reload$.next()">Reload</button>
+</app-single-page-layout>
